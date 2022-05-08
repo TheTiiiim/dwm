@@ -187,6 +187,8 @@ static int gettextprop(Window w, Atom atom, char *text, unsigned int size);
 static void grabbuttons(Client *c, int focused);
 static void grabkeys(void);
 static void incnmaster(const Arg *arg);
+static void incvolume(const Arg *arg);
+static void decvolume(const Arg *arg);
 static void keypress(XEvent *e);
 static void killclient(const Arg *arg);
 static void manage(Window w, XWindowAttributes *wa);
@@ -989,6 +991,20 @@ incnmaster(const Arg *arg)
 {
 	selmon->nmaster = MAX(selmon->nmaster + arg->i, 0);
 	arrange(selmon);
+}
+
+void
+incvolume(const Arg *arg)
+{
+	system("amixer sset Master 1+");
+	system("kill -35 $(pidof dwmblocks)");
+}
+
+void
+decvolume(const Arg *arg)
+{
+	system("amixer sset Master 1-");
+	system("kill -35 $(pidof dwmblocks)");
 }
 
 #ifdef XINERAMA

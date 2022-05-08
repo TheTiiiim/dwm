@@ -46,3 +46,11 @@ Configuration
 -------------
 The configuration of dwm is done by creating a custom config.h
 and (re)compiling the source code.
+
+Dependencies
+------------
+dwmblocks (my github version)
+amixer (alsa-utils)
+rxvt-unicode
+neofetch
+
