@@ -7,7 +7,6 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "xft:iosevka:size=10" };
-static const char dmenufont[]       = "xft:iosevka:size=10";
 #include "/home/thetiiiim/.cache/wal/colors-wal-dwm.h"
 
 /* tagging */
@@ -49,7 +48,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-c", "-l", "10", "-bw", "2", "-fn", dmenufont, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-c", "-l", "10", "-bw", "2", NULL };
 static const char *termcmd[]  = { "urxvt", "-e", "sh", "-c", "neofetch;bash", NULL };
 
 static Key keys[] = {
