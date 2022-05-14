@@ -60,7 +60,7 @@ click on a tag label adds/removes that tag to/from the focused window.
 Start
 .BR st(1).
 .TP
-.B Mod1\-p
+.B Mod1\-d
 Spawn
 .BR dmenu(1)
 for launching other programs.
@@ -101,7 +101,7 @@ Focus previous window.
 .B Mod1\-i
 Increase number of windows in master area.
 .TP
-.B Mod1\-d
+.B Mod1\-u
 Decrease number of windows in master area.
 .TP
 .B Mod1\-l
@@ -109,6 +109,18 @@ Increase master area size.
 .TP
 .B Mod1\-h
 Decrease master area size.
+.TP
+.B Mod1\-\-
+Decrease gap width
+.TP
+.B Mod1\-+
+Increase gap width
+.TP
+.B Mod1\-Shift\-_
+Reset gap width to default
+.TP
+.B Mod1\-Shift\-+
+Set gap width to 0. \ Reset gaps to value before being set to 0.
 .TP
 .B Mod1\-Return
 Zooms/cycles focused window to/from master area (tiled layouts only).
