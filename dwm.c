@@ -998,13 +998,13 @@ decvolume(const Arg *arg)
 void
 incbrightness(const Arg *arg)
 {
-	system("sudo brillo -A 10");
+	system("sudo brillo -q -A 10");
 }
 
 void
 decbrightness(const Arg *arg)
 {
-	system("sudo brillo -U 10");
+	system("sudo brillo -q -U 10");
 
 }
 
