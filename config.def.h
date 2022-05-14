@@ -56,6 +56,8 @@ static const Layout layouts[] = {
 	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
 #define XF86AudioLowerVolume 0x1008ff11
 #define XF86AudioRaiseVolume 0x1008ff13
+#define XF86MonBrightnessUp 0x1008ff02
+#define XF86MonBrightnessDown 0x1008ff03
 
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
@@ -117,6 +119,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = GAP_TOGGLE} },
 	{ 0,            XF86AudioRaiseVolume,      incvolume,      {0} },
 	{ 0,            XF86AudioLowerVolume,      decvolume,      {0} },
+	{ 0,            XF86MonBrightnessDown,     decbrightness,  {0} },
+	{ 0,            XF86MonBrightnessUp,       incbrightness,  {0} },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
