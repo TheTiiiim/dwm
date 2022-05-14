@@ -178,6 +178,8 @@ static void grabkeys(void);
 static void incnmaster(const Arg *arg);
 static void incvolume(const Arg *arg);
 static void decvolume(const Arg *arg);
+static void incbrightness(const Arg *arg);
+static void decbrightness(const Arg *arg);
 static void keypress(XEvent *e);
 static void killclient(const Arg *arg);
 static void manage(Window w, XWindowAttributes *wa);
@@ -991,6 +993,19 @@ decvolume(const Arg *arg)
 {
 	system("amixer sset Master 1-");
 	system("kill -35 $(pidof dwmblocks)");
+}
+
+void
+incbrightness(const Arg *arg)
+{
+	system("sudo brillo -A 10");
+}
+
+void
+decbrightness(const Arg *arg)
+{
+	system("sudo brillo -U 10");
+
 }
 
 #ifdef XINERAMA

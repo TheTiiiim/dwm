@@ -88,6 +88,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ 0,            XF86AudioRaiseVolume,      incvolume,      {0} },
 	{ 0,            XF86AudioLowerVolume,      decvolume,      {0} },
+	{ MODKEY|ShiftMask,             XK_u,      decbrightness,  {0} },
+	{ MODKEY|ShiftMask,             XK_i,      incbrightness,  {0} },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
